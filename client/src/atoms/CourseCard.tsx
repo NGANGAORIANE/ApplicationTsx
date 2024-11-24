@@ -7,12 +7,9 @@ interface CourseCardProps {
 
 const CourseCard: React.FC<CourseCardProps> = ({ name, description }) => {
     return (
-        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-blue-500 mb-4">{name}</h3>
-            <p className="text-gray-600">{description}</p>
-            <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200">
-                Voir le cours
-            </button>
+        <div className="bg-white p-4 rounded-lg shadow-md">
+            <h3 className="text-lg font-bold text-blue-500 mb-2">{name}</h3>
+            <p className="text-gray-700">{description}</p>
         </div>
     );
 };

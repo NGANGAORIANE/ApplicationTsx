@@ -1,6 +1,7 @@
 import React from 'react';
-import CourseCard from '../atoms/CourseCard';
+import CourseCard from '../atoms/CourseCard'; // Assure-toi que le composant est bien importé
 
+// Définition du type Course
 interface Course {
     id: number;
     name: string;

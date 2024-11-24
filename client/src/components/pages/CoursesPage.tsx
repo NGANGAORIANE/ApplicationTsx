@@ -1,5 +1,5 @@
 import React from 'react';
-import CoursesSection from '../organisms/CoursesSection';
+import CoursesSection from '../organism/CoursesSection';
 
 const CoursesPage: React.FC = () => {
     return (
