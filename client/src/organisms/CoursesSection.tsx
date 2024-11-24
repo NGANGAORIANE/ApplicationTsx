@@ -26,7 +26,7 @@ const CoursesSection: React.FC = () => {
     return (
         <div className="max-w-6xl mx-auto p-6">
             <h2 className="text-2xl font-bold text-center text-blue-500 mb-8">Nos Cours</h2>
-            <CourseList courses={courses || []} /> {/* Passer les cours récupérés à CourseList */}
+            <CourseList courses={courses || []} /> {/* Passe les cours récupérés à CourseList */}
         </div>
     );
 };
