@@ -11,7 +11,7 @@ interface Course {
 export const coursesApi = createApi({
     reducerPath: 'coursesApi', // Nom du reducer pour l'API des cours
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://votre-api.com/', // Remplacez avec l'URL de votre API
+        baseUrl: 'https:',
         prepareHeaders: (headers, { getState }) => {
             const token = (getState() as any).auth?.token; // Récupère le token JWT du state Redux
             if (token) {
@@ -23,7 +23,7 @@ export const coursesApi = createApi({
     endpoints: (builder) => ({
         // Endpoint pour récupérer tous les cours
         getCourses: builder.query<Course[], void>({
-            query: () => 'courses', // Remplacez par l'endpoint correspondant dans votre API
+            query: () => 'courses',
         }),
     }),
 });

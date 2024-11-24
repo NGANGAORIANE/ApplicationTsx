@@ -1,4 +1,3 @@
-// src/components/organisms/LoginSection.tsx
 import React from 'react';
 import LoginPage from '../templates/LoginTemplate'; // Importe le template de login
 
