@@ -1,15 +1,15 @@
+// src/components/templates/LoginTemplate.tsx
 import React from 'react';
+import LoginPage from './LoginPage'; // Le formulaire de connexion
 
-import LoginForm from '../molecules/LoginForm';
-const LoginTemplate = () => {
+const LoginTemplate: React.FC = () => {
     return (
-        <div className="flex items-center justify-center h-screen bg-gray-100">
-            <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg">
-                <h2 className="text-3xl font-bold text-center text-blue-500">Connexion</h2>
-                <LoginForm /> { }
-            </div>
+        <div>
+            <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">Bienvenue, Connectez-vous</h1>
+            <LoginPage />
         </div>
     );
 };
 
 export default LoginTemplate;
+

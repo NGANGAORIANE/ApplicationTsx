@@ -16,7 +16,7 @@ const CoursesSection: React.FC = () => {
         return (
             <div>
                 <p>Erreur lors de la récupération des cours.</p>
-                {/* Affiche l'erreur si elle existe */}
+                {/* EEROR */}
                 <p>{JSON.stringify(error)}</p>
             </div>
         );

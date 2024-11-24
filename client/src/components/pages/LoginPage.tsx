@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useLoginMutation } from '../';
+import { useLoginMutation } from '.../';
 import { useDispatch } from 'react-redux';
-import { setToken } from '../store/slices/AuthSlice';
-import { useNavigate } from 'react-router-dom'; // Si tu utilises react-router pour la navigation
+import { setToken } from '../authSlice';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage: React.FC = () => {
     const [email, setEmail] = useState<string>(''); // Typage explicite
@@ -46,7 +46,12 @@ const LoginPage: React.FC = () => {
                         required
                     />
                 </div>
-                {error && <p className="text-red-500">Erreur: {error.message}</p>}
+
+                {error && (
+                    <p className="text-red-500">
+                        Erreur: {`status` in error ? error.status : 'Problème de connexion'}
+                    </p>
+                )}
                 <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-md">
                     {isLoading ? 'Connexion en cours...' : 'Se connecter'}
                 </button>
