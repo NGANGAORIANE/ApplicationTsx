@@ -10,7 +10,7 @@ Styling : Tailwind CSS pour une interface utilisateur moderne et responsive
 Authentification : JWT (JSON Web Token) pour protéger l'accès aux ressources
 
 
-SStructure de la Base de Données
+Structure de la Base de Données
 La base de données contient deux entités principales : User et Module.
 
 Tables :
@@ -55,6 +55,11 @@ Récupération des Modules : L'utilisateur peut accéder aux détails des cours 
 Page des cours
 Après connexion, l'utilisateur est redirigé vers une page qui affiche une liste de cours avec leurs noms et descriptions.
 
+Pages des cours et connexion
+Vous avez mentionné deux pages principales : une page de connexion (LoginPage) et une page d'affichage des cours après connexion (CoursesPage). Le code que vous avez fourni pour ces deux pages correspond à cette structure :
+LoginPage : vous avez implémenté un formulaire avec des champs pour l'email et le mot de passe, qui envoie une requête à l'API pour authentifier l'utilisateur et stocker le token JWT.
+CoursesPage : la récupération des cours via l'API après authentification est correcte, avec le token JWT envoyé dans les en-têtes pour sécuriser l'accès.
+
 Installation
 Prérequis
 Avant de commencer, assurez-vous d'avoir installé les logiciels suivants :
@@ -65,18 +70,13 @@ npm (version 6 ou supérieure)
 
 Étapes d'installation
 
-Cloner le dépôt :
-git clone https://github.com/votre-repo/cours-en-ligne.git
-cd cours-en-ligne
-
 Installer les dépendances :
 npm install
 Configurer l'API :
 
-Assurez-vous que votre API est configurée pour gérer l'authentification JWT et que les endpoints auth/login et courses sont disponibles.
+S'assurer que l'API est configurée pour gérer l'authentification JWT et que les endpoints auth/login et courses sont disponibles.
 
 Configuration des variables d'environnement :
-
 
 bash
 Copier le code
@@ -96,13 +96,14 @@ CoursesPage : pour l'affichage des cours après connexion.
 Récupération des données
 Après la connexion réussie, les données des cours sont récupérées via une requête GET à l'API /courses protégée par le JWT.
 Si le token est invalide ou expiré, l'utilisateur est redirigé vers la page de connexion.
+Pages des cours et connexion.
 
-Intégrations des Wireframes
-Les wireframes sont intégrés dans l'application sous deux pages principales :
+une page de connexion (LoginPage) et une page d'affichage des cours après connexion (CoursesPage). Le code que vous avez fourni pour ces deux pages correspond à cette structure :
 
-LoginPage : Cette page inclut un formulaire pour l'authentification avec deux champs d'entrée pour l'email et le mot de passe, ainsi qu'un bouton de soumission. Après connexion, l'utilisateur est redirigé vers la page des modules.
+LoginPage : vous avez implémenté un formulaire avec des champs pour l'email et le mot de passe, qui envoie une requête à l'API pour authentifier l'utilisateur et stocker le token JWT.
 
-CoursesPage : Cette page affiche une liste des cours disponibles après connexion. Chaque module est présenté sous forme de carte avec le nom du cours et sa description.
+CoursesPage : la récupération des cours via l'API après authentification est correcte, avec le token JWT envoyé dans les en-têtes pour sécuriser l'accès.
+
 
 Récupération des Données
 L'application récupère les données des modules de cours après que l'utilisateur se soit authentifié avec succès. Une requête est envoyée à l'API avec le token JWT dans l'en-tête pour garantir que l'utilisateur est autorisé à voir les modules.
