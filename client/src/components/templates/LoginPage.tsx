@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginForm from '../molecules/LoginForm';
 
+
 const LoginPage = () => {
     return (
         <div className="min-h-screen flex flex-col">

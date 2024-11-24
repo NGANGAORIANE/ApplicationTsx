@@ -8,7 +8,6 @@ const LoginForm = () => {
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
-        // Ajouter la logique de connexion ici
     };
 
     return (
